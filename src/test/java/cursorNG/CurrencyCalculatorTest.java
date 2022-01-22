@@ -36,7 +36,7 @@ public class CurrencyCalculatorTest {
     }
 
 
-    @Test(groups = "smoke", dependsOnMethods = "verifyZeroValue")
+    @Test(groups = "smoke")
     public void verifyWrongCharacter() {
         System.out.println("test - Class Currency 4");
         currencyCalculator.convertToCurrency(20, '#');
