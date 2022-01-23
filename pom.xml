@@ -52,6 +52,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.10.0</version>
                 <configuration>
+
                     <reportVersion>2.6.0</reportVersion>
                 </configuration>
             </plugin>
@@ -70,10 +71,10 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
-                    <suiteXmlFiles>
-                        <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                    </suiteXmlFiles>
+<!--                    <suiteXmlFiles>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
                 </configuration>
                 <dependencies>
                     <dependency>
