@@ -71,10 +71,10 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
-<!--                    <suiteXmlFiles>-->
-<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
-<!--                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
