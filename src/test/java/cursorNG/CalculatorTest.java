@@ -30,7 +30,7 @@ public class CalculatorTest {
         softAssert.assertAll();
     }
 
-    @Test(groups = {"smoke","regression"})
+    @Test(groups = {"smoke","regression"}, enabled=false)
     @Parameters({"value1","value2","result"})
     public void verifySubtraction(int value1,int value2, int result){
         System.out.println("test - Class Calculator 2");
@@ -59,7 +59,7 @@ public class CalculatorTest {
 
 
 
-    @Test(expectedExceptions = ArithmeticException.class, groups = "regression")
+    @Test(expectedExceptions = ArithmeticException.class, groups = "regression" )
     public void verifyException() {
         System.out.println("test - Class Calculator 2");
         calculator.calculate(5, 0, '/');
