@@ -22,7 +22,7 @@ public class CalculatorTest {
 
         System.out.println("test - Class Calculator 1");
 
-        calculator.calculate(3, 2, '+');
+        calculator.calculate(3, 1, '+');
         softAssert.assertEquals(calculator.getValue(),5,  "expected value should be 5");
 
         calculator.calculate(6, 2, '+');
