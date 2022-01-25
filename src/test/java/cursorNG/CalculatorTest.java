@@ -11,6 +11,9 @@ public class CalculatorTest {
 
     private static Calculator calculator =new Calculator();
 
+    private final String set1 = System.getProperty("dataset");
+
+
     @BeforeMethod
     public void dataSetup(){
         calculator = new Calculator();
@@ -46,8 +49,17 @@ public class CalculatorTest {
     }
 
     @DataProvider(name = "values")
-    public static Object[][] primeNumbers(){
-        return new Object[][] {{10,2,5}, {100,5,20}};
+    public  Object[][] primeNumbers(){
+        Object[][] object = new Object[0][0];
+        if (set1.equals("set 1")){
+             object = new Object[][] {{10,2,5}, {100,5,20}};
+        }if (set1.equals("set 2")) {
+            object = new Object[][] {{4,2,2}, {50,5,10}};
+        } if (set1.equals("set 3")){
+            object = new Object[][] {{30,2,15}, {1000,10,100}};
+        }
+
+        return object;
     }
 
     @Test(groups = "regression", dataProvider = "values")
