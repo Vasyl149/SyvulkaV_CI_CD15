@@ -51,11 +51,11 @@ public class CalculatorTest {
     @DataProvider(name = "values")
     public  Object[][] primeNumbers(){
         Object[][] object = new Object[0][0];
-        if (set1.equals("set 1")){
+        if (set1.equals("set1")){
              object = new Object[][] {{10,2,5}, {100,5,20}};
-        }if (set1.equals("set 2")) {
+        }if (set1.equals("set2")) {
             object = new Object[][] {{4,2,2}, {50,5,10}};
-        } if (set1.equals("set 3")){
+        } if (set1.equals("set3")){
             object = new Object[][] {{30,2,15}, {1000,10,100}};
         }
 
