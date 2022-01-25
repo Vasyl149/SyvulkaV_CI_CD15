@@ -11,7 +11,7 @@ public class CalculatorTest {
 
     private static Calculator calculator =new Calculator();
 
-   private final String set1 = System.getProperty("dataset");
+   private final String myset = System.getProperty("dataset");
    //private final String myset = "set2";
 
 
