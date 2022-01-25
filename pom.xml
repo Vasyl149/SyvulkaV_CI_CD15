@@ -72,7 +72,7 @@
                     </systemProperties>
                     <systemPropertyVariables>
                         <!--suppress UnresolvedMavenProperty -->
-                        <myset>${set1}</myset>
+                        <myset>${myset}</myset>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->

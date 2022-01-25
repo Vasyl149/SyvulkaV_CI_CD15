@@ -11,7 +11,8 @@ public class CalculatorTest {
 
     private static Calculator calculator =new Calculator();
 
-    private final String set1 = System.getProperty("dataset");
+   // private final String set1 = System.getProperty("dataset");
+   private final String myset = "set5";
 
 
     @BeforeMethod
@@ -50,12 +51,12 @@ public class CalculatorTest {
 
     @DataProvider(name = "values")
     public  Object[][] primeNumbers(){
-        Object[][] object = new Object[0][];
-        if (set1.equals("set1")){
+        Object[][] object = new Object[0][0];
+        if (myset.equals("set1")){
              object = new Object[][] {{10,2,5}, {100,5,20}};
-        }if (set1.equals("set2")) {
+        }if (myset.equals("set2")) {
             object = new Object[][] {{4,2,2}, {50,5,10}};
-        } if (set1.equals("set3")){
+        } if (myset.equals("set3")){
             object = new Object[][] {{30,2,15}, {1000,10,100}};
         }
 
