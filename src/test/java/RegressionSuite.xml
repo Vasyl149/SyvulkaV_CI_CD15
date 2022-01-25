@@ -8,8 +8,8 @@
         <parameter name="result" value="15"></parameter>
         <groups>
             <run>
-                <include name="smoke"/>
-                <include name="regression"/>
+                <include name="SmokeSuite"/>
+                <include name="RegressionSuite"/>
             </run>
         </groups>
         <packages>

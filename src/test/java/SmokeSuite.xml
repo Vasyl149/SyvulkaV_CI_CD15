@@ -8,7 +8,7 @@
         <parameter name="result" value="15"></parameter>
         <groups>
             <run>
-                <include name="smoke"/>
+                <include name="SmokeSuite"/>
 
             </run>
         </groups>
