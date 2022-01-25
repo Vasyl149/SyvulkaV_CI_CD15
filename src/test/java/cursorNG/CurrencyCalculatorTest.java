@@ -46,8 +46,6 @@ public class CurrencyCalculatorTest {
     }
 
     @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter", dataProvider = "values")
-
-   // @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter")
     public void verifyConvertToZloty(int value1, int result)  {
         System.out.println("test - Class Currency 3");
         currencyCalculator.convertToCurrency(value1, 'P');
