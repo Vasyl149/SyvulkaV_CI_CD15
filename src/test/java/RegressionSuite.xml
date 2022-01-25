@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite1" parallel="methods" thread-count="11">
-    <test name="test1">
+<suite name="RegressionSuite" parallel="methods" thread-count="11">
+    <test name="alltests">
         <parameter name="value1" value="20"></parameter>
         <parameter name="value2" value="5"></parameter>
         <parameter name="result" value="15"></parameter>

@@ -16,14 +16,14 @@ public class CurrencyCalculatorTest {
 
     }
 
-    @Test(groups = {"smoke", "regression"}, dependsOnMethods = "verifyWrongCharacter")
+    @Test(groups = {"SmokeSuite", "RegressionSuite"}, dependsOnMethods = "verifyWrongCharacter")
     public void verifyConvertToDollar(){
         System.out.println("test - Class Currency 1");
         currencyCalculator.convertToCurrency(20, 'D');
         Assert.assertEquals(currencyCalculator.getValue(), 540);
     }
 
-    @Test(groups = {"smoke", "regression"}, dependsOnMethods = "verifyWrongCharacter")
+    @Test(groups = {"SmokeSuite", "RegressionSuite"}, dependsOnMethods = "verifyWrongCharacter")
     public void verifyConvertToEuro() {
 
         System.out.println("test - Class Currency 2");
@@ -45,7 +45,7 @@ public class CurrencyCalculatorTest {
         return object;
     }
 
-    @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter", dataProvider = "values")
+    @Test(groups = "RegressionSuite", dependsOnMethods = "verifyWrongCharacter", dataProvider = "values")
     public void verifyConvertToZloty(int value1, int result)  {
         System.out.println("test - Class Currency 3");
         currencyCalculator.convertToCurrency(value1, 'P');
@@ -53,14 +53,14 @@ public class CurrencyCalculatorTest {
     }
 
 
-    @Test(groups = "smoke")
+    @Test(groups = "SmokeSuite")
     public void verifyWrongCharacter() {
         System.out.println("test - Class Currency 4");
         currencyCalculator.convertToCurrency(20, '#');
         Assert.assertEquals(currencyCalculator.getValue(), 0);
     }
 
-    @Test(groups = "regression")
+    @Test(groups = "RegressionSuite")
     public void verifyZeroValue() {
         System.out.println("test - Class Currency 5");
         currencyCalculator.convertToCurrency(0, 'E');

@@ -20,7 +20,7 @@ public class CalculatorTest {
         calculator = new Calculator();
     }
 
-    @Test(groups = {"smoke","regression"})
+    @Test(groups = {"SmokeSuite","RegressionSuite"})
     public void verifySum()  {
         SoftAssert softAssert = new SoftAssert();
 
@@ -34,7 +34,7 @@ public class CalculatorTest {
         softAssert.assertAll();
     }
 
-    @Test(groups = {"smoke","regression"}, enabled=false)
+    @Test(groups = {"SmokeSuite","RegressionSuite"}, enabled=false)
     @Parameters({"value1","value2","result"})
     public void verifySubtraction(int value1,int value2, int result){
         System.out.println("test - Class Calculator 2");
@@ -42,7 +42,7 @@ public class CalculatorTest {
         Assert.assertEquals(calculator.getValue(),result );
     }
 
-    @Test(groups ="regression")
+    @Test(groups ="RegressionSuite")
     public void verifyMult(){
         System.out.println("test - Class Calculator 3");
         calculator.calculate(6, 5, '*');
@@ -63,7 +63,7 @@ public class CalculatorTest {
         return object;
     }
 
-    @Test(groups = "regression", dataProvider = "values")
+    @Test(groups = "RegressionSuite", dataProvider = "values")
     public void verifyDivision(int value1, int value2, int result){
         System.out.println("test - Class Calculator 4");
         calculator.calculate(value1, value2, '/');
@@ -72,7 +72,7 @@ public class CalculatorTest {
 
 
 
-    @Test(expectedExceptions = ArithmeticException.class, groups = "regression" )
+    @Test(expectedExceptions = ArithmeticException.class, groups = "RegressionSuite" )
     public void verifyException() {
         System.out.println("test - Class Calculator 2");
         calculator.calculate(5, 0, '/');
