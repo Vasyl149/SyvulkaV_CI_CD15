@@ -50,7 +50,7 @@ public class CalculatorTest {
 
     @DataProvider(name = "values")
     public  Object[][] primeNumbers(){
-        Object[][] object = new Object[][]{{0,0,0},{0,0,0}};
+        Object[][] object = new Object[0][];
         if (set1.equals("set1")){
              object = new Object[][] {{10,2,5}, {100,5,20}};
         }if (set1.equals("set2")) {
