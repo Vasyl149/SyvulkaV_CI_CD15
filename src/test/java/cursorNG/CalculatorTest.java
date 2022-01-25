@@ -67,7 +67,7 @@ public class CalculatorTest {
     public void verifyDivision(int value1, int value2, int result){
         System.out.println("test - Class Calculator 4");
         calculator.calculate(value1, value2, '/');
-        Assert.assertEquals(calculator.getValue(),result , "result must be "+ result);
+        Assert.assertEquals(calculator.getValue(),result);
     }
 
 
