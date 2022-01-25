@@ -57,7 +57,7 @@ public class CalculatorTest {
         }if (myset.equals("set2")) {
             object = new Object[][] {{4,2,2}, {50,5,10}};
         } if (myset.equals("set3")){
-            object = new Object[][] {{30,2,15}, {1000,10,100}};
+            object = new Object[][] {{30,2,15}, {1000,10,1}};
         }
 
         return object;
