@@ -7,6 +7,9 @@ import org.testng.annotations.*;
 public class CurrencyCalculatorTest {
     private CurrencyCalculator currencyCalculator = new CurrencyCalculator();
 
+    private final String myset = System.getProperty("myset");
+   // private final String myset = "set3";
+
     @BeforeClass
     public void dataSetup() {
         currencyCalculator = new CurrencyCalculator();
@@ -28,11 +31,27 @@ public class CurrencyCalculatorTest {
         Assert.assertEquals(currencyCalculator.getValue(), 900);
     }
 
-    @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter")
-    public void verifyConvertToZloty()  {
+    @DataProvider(name = "values")
+    public  Object[][] primeNumbers(){
+        Object[][] object = new Object[0][0];
+        if (myset.equals("set1")){
+            object = new Object[][] {{10,70}, {100,700}};
+        }if (myset.equals("set2")) {
+            object = new Object[][] {{4,28}, {50,350}};
+        } if (myset.equals("set3")){
+            object = new Object[][] {{30,210}, {1000,700}};
+        }
+
+        return object;
+    }
+
+    @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter", dataProvider = "values")
+
+   // @Test(groups = "regression", dependsOnMethods = "verifyWrongCharacter")
+    public void verifyConvertToZloty(int value1, int result)  {
         System.out.println("test - Class Currency 3");
-        currencyCalculator.convertToCurrency(10, 'P');
-        Assert.assertEquals(currencyCalculator.getValue(), 70);
+        currencyCalculator.convertToCurrency(value1, 'P');
+        Assert.assertEquals(currencyCalculator.getValue(), result);
     }
 
 
