@@ -3,9 +3,6 @@
 
 <suite name="SmokeSuite" parallel="methods" thread-count="11">
     <test name="SmokeTests">
-        <parameter name="value1" value="20"></parameter>
-        <parameter name="value2" value="5"></parameter>
-        <parameter name="result" value="15"></parameter>
         <groups>
             <run>
                 <include name="SmokeSuite"/>
